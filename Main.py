@@ -22,8 +22,8 @@ def login_button_pressed(ausermanager, username, password, error_message):
             label_text.set("Password Manager")  # set the title of the page
             ctk.CTkLabel(frame, textvariable=label_text, font=("", 18)).pack(pady=10, padx=10)  # print the title of the page
             ctk.CTkButton(frame, text="Log Out", command=lambda:back_to_login_page(error_message), width = 10, height=30).place(x= 10, y =10)  # log out button
-            ctk.CTkButton(frame, text="Store a password", command=lambda:store_password_page(id, password)).pack(pady=30, padx=10)  # button that will take the user to a page that allows the user to store their passwords
-            ctk.CTkButton(frame, text="Retrieve a password", command=lambda:retrieve_password_page(id, password)).pack(pady=30, padx=10)  # button to take the user to a page to retrieve previously stored passwords
+            ctk.CTkButton(frame, text="Store a password", command=lambda:store_password_page(id, password), height=60).pack(pady=30, padx=10)  # button that will take the user to a page that allows the user to store their passwords
+            ctk.CTkButton(frame, text="Retrieve a password", command=lambda:retrieve_password_page(id, password), height=60).pack(pady=30, padx=10)  # button to take the user to a page to retrieve previously stored passwords
 
 
 # this function produces the page that allows the user to store a password
@@ -227,8 +227,8 @@ def back_logged_page(id, password):
     label_text.set("Password Manager")  # set title of page
     ctk.CTkLabel(frame, textvariable=label_text, font=("", 18)).pack(pady=10, padx=10) # print title of the page 
     ctk.CTkButton(frame, text="Log Out", command=lambda:back_to_login_page(error_message),width=10, height=30).place(x= 10, y =10)  # log out button
-    ctk.CTkButton(frame, text="Store a password", command=lambda:store_password_page(id, password)).pack(pady=30, padx=10)  # button to take a user to page to store a password
-    ctk.CTkButton(frame, text="Retrieve a password", command=lambda:retrieve_password_page(id, password)).pack(pady=30, padx=10)  # button to take a user to page to retrieve password details
+    ctk.CTkButton(frame, text="Store a password", command=lambda:store_password_page(id, password), height=60).pack(pady=30, padx=10)  # button to take a user to page to store a password
+    ctk.CTkButton(frame, text="Retrieve a password", command=lambda:retrieve_password_page(id, password), height=60).pack(pady=30, padx=10)  # button to take a user to page to retrieve password details
 
 # this function logs a user out
 
